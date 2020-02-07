@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Object形式的自定义对象
+        // var 变量名 = new Object();   定义一个对象实例
+        // 变量名.属性名 = 值;           添加一个属性
+        // 变量名.函数名 = function(){}  添加一个函数
+        var obj = new Object();
+        alert(typeof(obj));
+        obj.name = "Morty";
+        obj.age = 12;
+
+        obj.fun = function() {
+            alert(this.name + "'s age is " + this.age);
+        }
+
+        alert(obj.name);
+        obj.fun();
+
+        // {}花括号形式的自定义对象
+        // var obj = {                定义一个空对象实例
+        //     属性: 值,               添加了一个属性
+        //     属性: 值,               添加了一个属性 
+        //     函数名: function(){}    添加了一个函数
+        // }
+        var obj2 = {};
+        alert(typeof(obj2));
+
+        var obj3 = {
+            name: "Morty",
+            age: 12,
+            fun: function(){
+                alert(this.name + "'s age is " + this.age);
+            }
+        }
+        alert(obj3.age);
+        obj3.fun();
+    </script>
+</body>
+</html>
