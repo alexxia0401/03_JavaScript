@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>运算符</title>
+</head>
+<body>
+    <!-- 
+        等于   ==
+        全等于 ===
+     -->
+    <script type="text/javascript">
+        var i = 12;
+        var s = "12";
+        // 等于比较在js语言中，只是简单的做字面值的比较
+        alert(i == s); // true
+        // 全等于，除了做字面值的比较之外，还会检查两个数据的类型是否一致
+        alert(i === s); // false
+    </script>
+
+    <!-- 
+        且运算     &&
+        或运算     ||
+        取反运算   !
+
+        在js中，任何的变量，都有其一个逻辑值（就是真假值）
+        0, null, undefined, ""(空串) 都认为是false
+    -->
+    <script type="text/javascript">
+        var i = null;
+        if (i) {
+            alert("null is true");
+        } else {
+            alert("null is false");
+        }
+    </script>
+
+    <!-- 
+        && 与运算
+        有两种情况
+        1. 当表达式全为真的时候，返回最后一个表达式的值
+        2. 当表达式中，有一个为假的时候，返回第一个为假的表达式的值
+    -->
+    <script type="text/javascript">
+        var a = "abc";
+        var b = true;
+        var c =null;
+        var d = false;
+
+        alert(b && a); // abc
+        alert(a && b); // true
+
+        alert(a && d); // false
+        alert(c && d); // null
+    </script>
+
+    <!-- 
+        || 与运算
+        有两种情况
+        1. 当表达式全为假的时候，返回最后一个表达式的值
+        2. 当表达式中，有一个为真的时候，返回第一个为真的表达式的值
+    -->
+    <script type="text/javascript">
+        alert(d || c); // null
+        alert(c || d); // false
+
+        alert(c || b); // true
+        alert(a || b); // abc
+    </script>
+    <!-- 
+        并且 && 与运算和 || 或运算 有短路
+        短路就是说，当&&或||运算有结果了之后，后面的表达式不再执行
+    -->
+</body>
+</html>
