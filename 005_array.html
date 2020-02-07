@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>数组</title>
+</head>
+<body>
+    <!-- 
+        var 数组名 = []; // 定义一个空数组
+    -->
+    <script type="text/javascript">
+        var arr = []; // 定义一个空数组
+        alert(arr.length); // 0
+        arr[0] = 12;
+        alert(arr[0]); // 12
+        alert(arr.length); // 1
+        // 在js中通过下标对数组元素进行赋值操作的时候，js会自动根据赋值的最大下标做扩容操作
+        arr[2] = "abc";
+        alert(arr.length); // 3
+        alert(arr[1]); // undefined
+
+        for (var i = 0; i < arr.length; i++ ) {
+            alert(arr[i]);
+        }
+
+        var arr2 = [12, "abc", true];
+        alert(arr2.length); // 3
+        arr2[9] = 12;
+        alert(arr2.length); // 10
+    </script>
+</body>
+</html>
