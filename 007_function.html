@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+        // JS中的函数没有重载一说。如果重载了，后面那个函数会直接覆盖前面那个函数
+        function fun() {
+            alert("无参函数fun()被调用了");
+        }
+
+        function fun(a, b) {
+            alert("有参函数fun(" + a + ", " + b + ")被调用了");
+        }
+
+        fun();
+
+        function fun1() {
+            // arguments 是隐形参数，可以用来接收传递的所有参数的值
+            // 这个隐形参数操作和数组一样
+            alert(arguments.length);
+            for (var i = 0; i < arguments.length; i++) {
+                alert(arguments[i]);
+            }
+
+        }
+
+        fun1(12, "abc", true);
+
+        function sum() {
+            var sum = 0;
+            for (var i = 0; i < arguments.length; i++) {
+                if (typeof(arguments[i]) == "number") {
+                    sum += arguments[i];
+                }
+            }
+            return sum;
+        }
+
+        alert(sum(1, 2, "abc", 10));
+        
+    </script>
+</body>
+</html>
