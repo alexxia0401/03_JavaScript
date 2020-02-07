@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>function definition</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // 定义一个无参函数
+        function fun() {
+            alert("fun被调用了");
+        }
+        fun();
+
+        // 定义有参函数
+        function fun1(a, b) {
+            alert("fun1被调用了a->" + a + ", b->" + b);
+        }
+        fun1(12, "abc");
+
+        // 定义一个有返回值的函数
+        function sum(a, b) {
+            return a + b;
+        }
+        alert(sum(3, 5));
+
+        // 函数的另一种定义方式
+        var minus = function(a, b) {
+            return a - b;
+        }
+        alert(minus(888, 222));
+    </script>
+</body>
+</html>
