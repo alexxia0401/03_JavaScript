@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>onchange事件，内容发生改变事件</title>
+    <script type="text/javascript">
+        function onchangeFun() {
+            alert("静态注册的onchange事件");
+        }
+
+        window.onload = function() {
+            var starObj = document.getElementById("star");
+            starObj.onchange = function() {
+                alert("动态注册的onchange事件");
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- 静态注册onchange事件 -->
+    <h3>请选择你心中的女神</h3>
+    <select onchange="onchangeFun();">
+        <option>--你的女神--</option>
+        <option>新垣结衣</option>
+        <option>石原里美</option>
+        <option>堀北真希</option>
+    </select>
+    <br>
+    <h3>请选择你心中的男神</h3>
+    <select id="star">
+        <option>--你的男神--</option>
+        <option>莱昂纳多</option>
+        <option>彭于晏</option>
+        <option>堺雅人</option>
+    </select>
+</body>
+</html>
