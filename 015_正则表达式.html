@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS正则表达式</title>
+</head>
+<body>
+    <script type="text/javascript">
+        window.onload = function() {
+            // 如何创建一个正则表达式对象
+            // 表示验证字符串中是否包含字母e
+            var patt = new RegExp("e");
+            alert(patt);
+            // var patt = /e/;
+            alert(patt.test("abcd"));
+            alert(patt.test("abcde"));
+
+            patt = /[abc]/; // 是否包含字母a或b或c
+            patt = /[a-z]/; // 是否包含任意小写字母
+
+            patt = /\w/; // 是否包含字母，数字，下划线
+            patt = /\W/; // 取反，包含字母，数字，下划线以外的字符
+
+            patt = /a+/; // 至少一个a，一个或多个
+            patt = /a*/; // 零个到多个
+            patt = /a?/; // 零个或一个
+
+            patt = /a{3}/; // a重复3次
+            patt = /a{3,5}/; // a重复3到5次
+            patt = /a{3,}/; // a重复3次到无数次
+
+            patt = /a$/; // 以a结尾
+            patt = /^a/; // 以a开头
+        }
+    </script>
+</body>
+</html>
