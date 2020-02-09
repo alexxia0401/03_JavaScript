@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>getElementsByTagName，注意Elements是复数</title>
+    <script type="text/javascript">
+        function checkAll() {
+            // 通过name属性查找所有标签对象集合
+            // 集合中的元素顺序和这些标签在HTML页面中从上到下的顺序一样
+            var inputObjs = document.getElementsByTagName("input");
+            for (var i = 0; i < inputObjs.length; i++) {
+                inputObjs[i].checked = true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>兴趣爱好</h3>
+    <input type="checkbox">打游戏
+    <input type="checkbox">看片子
+    <input type="checkbox">看鬼故事
+    <br>
+
+    <button onclick="checkAll();">全选</button>
+</body>
+</html>
