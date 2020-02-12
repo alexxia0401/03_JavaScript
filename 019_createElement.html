@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>createElement</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            var divObj = document.createElement("div");
+            divObj.innerHTML = "Hello~";
+
+            document.body.appendChild(divObj);
+
+            // 另一种写法
+            var divObj2 = document.createElement("div");
+            var textNode = document.createTextNode("Welcome to JS");
+            divObj2.appendChild(textNode);
+            document.body.appendChild(divObj2);
+        }
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>
